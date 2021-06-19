@@ -1,0 +1,20 @@
+<div class="chat-text-box">
+    <!-- <div class="action-box left">
+      <div class="action-btn edit" [ngClass]="{'active':froalaBoxEditMode}" (click)="toggleFroalaBoxEditMode()">
+        <svg>
+          <use href="assets/icons/svgs.svg#icon-pencil"/>
+      </svg>
+      </div>
+    </div> -->
+    <!-- [ngClass]="{'edit':froalaBoxEditMode}" [(froalaModel)]="messageText" [froalaEditor]="froalaOptions" -->
+    <div class="froalaEditor">
+      <input (keydown.enter)="sendMessage()" [(ngModel)]="messageText" placeholder="Message" type="text"/>
+    </div>
+    <div class="action-box right">
+      <div class="action-btn send" (click)="sendMessage()">
+        <svg>
+            <use href="assets/icons/svgs.svg#icon-send"/>
+        </svg>
+      </div>
+    </div>
+  </div>

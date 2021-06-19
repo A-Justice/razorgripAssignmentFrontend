@@ -1,0 +1,76 @@
+html {
+    //****COLORS****//
+    //text-colors
+    --primary-text-color: black;
+
+    //border-colors
+    --primary-border-color: #efefef;
+    --grey-border-color: var(--grey-color);
+
+    //hover-colors
+    --hover-grey: #f5f5f5;
+    --primary-hover-color: #f5f5f5;
+    --light-black: #181a1b;
+
+    //****COLORS****///
+
+    //Z-Indexes
+    --z-one: 1;
+    --z-two: 2;
+    --z-three: 3;
+    --z-four: 4;
+    --z-five: 5;
+    --z-six: 6;
+    --z-seven: 7;
+    --z-eight: 8;
+    --z-nine: 9;
+    --z-ten: 10;
+
+    --light-input-placeholder-color:rgb(172, 172, 172);
+    --dark-input-placeholder-color:rgb(77, 77, 77);
+    //Colors
+    --white: #ffffff;
+    --black: #0f0f10;
+    --dark-white: #fafafa;
+    --light-black: #4a4a4a;
+    --border-color: #efefef;
+    --white-text: #f1f7fc;
+    --light-white-text: white;
+    --dark-white-text: #fafafa;
+    --light-black-text: #4c4c4c;
+    --dark-black-text: #333333;
+    --link-text: #4c94db;
+    --primary-color: #1976d2;
+    --primary-color-dark: #004c97;
+    --secondary-color: #004ba0;
+    --error-color:rgb(189, 102, 102);
+    --hover-background:#f2f2f2;
+    --dark-hover-background:#cfcece;
+    //Grey
+    --light-grey: #cfcece;
+    --grey: grey;
+    --dark-grey: grey;
+    //landingAbstractColor
+    --landingabstractcolor: var(--tertiary-yellow);
+    //transitions
+    --t-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    //****SHADOWS****//
+    --primary-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --secondary-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --top-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12), 0 -1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-3d: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+        0 20px 20px rgba(0, 0, 0, 0.15);
+    //****SHADOWS****//
+    //border
+    --border-color: #e8e9eb;
+
+    //*** Border Radius///
+    --bigger-radius:4rem;
+    --big-radius:2rem;
+    --small-radius:.3rem;
+    --round-radius:50%;
+
+    --border:1px solid var(--border-color);
+}

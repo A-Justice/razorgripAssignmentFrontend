@@ -1,0 +1,77 @@
+@mixin setScrollbarVisibility($visibility) {
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border: none;
+    }
+    @if ($visibility == "hidden") {
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(to left, transparent, transparent);
+            border: none;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb:active {
+            background: linear-gradient(to left, transparent, transparent);
+        }
+    } @else {
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(to left, #fff, #e4e4e4);
+            border: 1px solid #aaa;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fff;
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: linear-gradient(to left, grey, rgba(grey, 0.8));
+        }
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin floatAndCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin hollowBorder($hasImage:true){
+    padding: 2px;
+    border-radius: 50%;
+    border:var(--border);
+    overflow: hidden;
+    @if($hasImage){
+        img,.img{
+            border-radius: 50%;
+        }
+    }
+
+}
+
+@mixin autoFill($color:black) {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        -webkit-text-fill-color: $color;
+    }
+}

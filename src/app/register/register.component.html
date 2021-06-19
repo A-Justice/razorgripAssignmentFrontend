@@ -1,0 +1,73 @@
+<div class="register-body">
+    <div class="register-box-wrapper">
+        <div class="register-box-wrapper__left">
+            <img src="assets/svgs/thingstosay.svg" alt="">
+        </div>
+        <div class="register-box-wrapper__right">
+            <form [formGroup]="registerForm" class="register-box">
+                <div class="register-box__header">
+                    <h3>Register</h3>
+                </div>
+                <div class="register-box__body">
+                    <div class="c-input">
+                        <input (keyup)="userNameChanged($event)" type="email" formControlName="userName" placeholder="Email" />
+                        <div class="c-addon">
+                            <svg class="check" *ngIf="isUserNameUnique == true">
+                                <use href="assets/icons/svgs.svg#icon-check" />
+                            </svg>
+                            <svg class="close" *ngIf="isUserNameUnique == false">
+                                <use href="assets/icons/svgs.svg#icon-close" />
+                            </svg>
+                            <svg class="spin" *ngIf="isUserNameUnique == undefined">
+                                <use href="assets/icons/svgs.svg#icon-spinner" />
+                            </svg>
+                        </div>
+                        <b class="val-msg">
+                            <span *ngIf="registerForm.get('userName').touched && registerForm.get('userName').errors?.required">Your email is required</span>
+                            <span *ngIf="registerForm.get('userName').touched && registerForm.get('userName').errors?.email">Enter a correct email address</span>
+                        </b>
+                    </div>
+                    <!-- <div class="c-input">
+                        <input type="email" formControlName="email" placeholder="Email" />
+                        <i class="c-addon fa fa-envelope"></i>
+                        <b class="val-msg">
+                            <span *ngIf="registerForm.get('email').touched && registerForm.get('email').errors?.required">Your email is required</span>
+                            <span *ngIf="registerForm.get('email').touched && registerForm.get('email').errors?.email">enter a valid email address</span>
+                        </b>
+                    </div> -->
+                    <div class="c-input">
+                        <input type="password" formControlName="password" placeholder="Password" />
+                        <i class="c-addon fa fa-lock"></i>
+                        <b class="val-msg">
+                            <span *ngIf="registerForm.get('password').touched && registerForm.get('password').errors?.required">Your password is required</span>
+                        </b>
+                    </div>
+                    <!-- <app-searchbox (onSelectionChanged)="countryChanged($event)" [showPinned]="false" weight="lite" theme="dark"></app-searchbox> -->
+                </div>
+                <div class="loading"></div>
+                <div class="error-msg">{{error}}</div>
+
+                <div class="registerbtnpane">
+                    <button (click)="submitRegisterForm()" class="btn btn--b-l">Register</button>
+                </div>
+                <div class="extraspane">
+                    <p>Already have an account? <a class="link" routerLink="/login"> Signin</a></p>
+                    <a class="link forgot-pwd" routerLink="/resetpassword">Forgot Password ?</a>
+                </div>
+
+
+                <!-- <p class="register-box__header">Or Register With</p>
+                <div class="socials">
+                    <a href="" class="slink"><img src="assets/images/fblogo.png" alt="facebook"></a>
+                    <a href="" class="slink"><img src="assets/images/googlelogo.png" alt="google"></a>
+                    <a href="" class="slink"><img src="assets/images/twitterlogo.png" alt="twitter"></a>
+                </div> -->
+
+
+                <div class="register-box__footer">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    position: relative;
+    color: var(--light);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--hover-background);
+        //transform: translateY(-2px);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    // btn-dark
+    &-d {
+        @extend .btn;
+        background-color: var(--white);
+        color: var(--dark-black-text);
+
+        &:hover {
+            color: var(--light-black-text);
+            background-color: var(--hover-background);
+        }
+    }
+
+    //btn-light
+    &-l {
+        @extend .btn;
+        color: var(--dark-white-text);
+
+        &:hover {
+            color: var(--dark-black-text);
+            background-color: var(--hover-background);
+        }
+    }
+
+    //btn-colored
+    &-c {
+        @extend .btn;
+        color: var(--primary-color);
+    }
+
+    //btn-transparent
+    &-t {
+        @extend .btn;
+    }
+
+    //btn--bordered-light
+    &--b-l {
+        border: 1px solid var(--dark-white);
+    }
+
+    //btn--bordered-dark
+    &--b-d {
+        border: var(--border);
+    }
+
+    //btn--bordered-colored
+    &--b-c {
+        border: 1px solid var(--primary-color);
+    }
+
+    &--rounded {
+        border-radius: var(--big-radius);
+    }
+
+    &-circle {
+        @extend .btn;
+        border-radius: 50%;
+    }
+
+    &--square {
+        border-radius: 0;
+    }
+
+    &.mybtn--big {
+        margin: 2rem;
+        font-size: 2rem;
+    }
+}

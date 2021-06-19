@@ -1,0 +1,62 @@
+<section class="lgmain row">
+    <div class="lgmain__header">
+        <div class="logo"></div>
+        <div class="heading"> 
+            Login
+        </div>
+        <div class="actions">
+            <a routerLink="" class="homelink">Back To Home</a>
+            <button routerLink="/register" class="btn btn-c btn--b-c">register</button>
+        </div>
+    </div>
+    <div class="lgblock lgmain__left">
+        <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()" class="lgform">
+
+            <section class="lgheader">
+                <img src="assets/images/message.png" alt="logo">
+            </section>
+
+            <section class="lgmid">
+
+                <div class="c-input invalid">
+                    <input formControlName="userNameOrEmail" type="text" placeholder="UserName or Email" />
+                    <i class="c-addon fa fa-envelope"></i>
+                    <b class="val-msg">
+                        <span *ngIf="loginForm.get('userNameOrEmail').touched && loginForm.get('userNameOrEmail').errors?.required">This field is required</span>
+                    </b>
+                </div>
+
+                <div class="c-input">
+                    <input formControlName="password" type="password" placeholder="Password" />
+                    <i class="c-addon fa fa-lock"></i>
+                    <b class="val-msg">
+                        <span *ngIf="loginForm.get('password').touched && loginForm.get('password').errors?.required">This field is required</span>
+                    </b>
+                </div>
+            </section>
+
+            <div class="error-msg">{{error}}</div>
+            <div class="lgfooter">
+                <div class="lgfooter__first">
+                    <label class="c-checkbox">
+                        <input formControlName="rememberMe" type="checkbox">
+                        <span class="marker"></span>
+                        <p class="check-text">Remember me ?</p>
+                    </label>
+                    <Button type="submit" class="btn btn--b-d">Login
+                    </Button>
+                </div>
+                <div class="lgfooter__second">
+                    <a routerLink="/register">Dont have an account? register </a>
+                </div>
+                <!-- <div class="lgfooter__header"><b>Or Login Using</b></div>
+                <div class="lgfooter__third">
+                    <a href="" class="slink"><img src="assets/images/fblogo.png" alt="facebook"></a>
+                    <a href="" class="slink"><img src="assets/images/googlelogo.png" alt="google"></a>
+                    <a href="" class="slink"><img src="assets/images/twitterlogo.png" alt="twitter"></a>
+                </div> -->
+            </div>
+        </form>
+    </div>
+    <div class="lgmain__right"></div>
+</section>

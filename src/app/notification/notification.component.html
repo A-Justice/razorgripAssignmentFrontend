@@ -1,0 +1,10 @@
+<div class="app-notification">
+    <div *ngFor="let message of notifictationService.notifications;let i = index" class="notification">
+        <div class="message">{{message}}</div>
+        <a (click)="notifictationService.removeNotification(i)" class="closebtn">
+            <svg>
+                <use href="assets/icons/svgs.svg#icon-cross" />
+            </svg>
+        </a>
+    </div>
+</div>

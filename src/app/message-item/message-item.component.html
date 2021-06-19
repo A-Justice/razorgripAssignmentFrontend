@@ -1,0 +1,16 @@
+<div *ngIf="message" class="message-container" [ngClass]="[type]">
+    <div class="message-box">
+        <div class="message-box__right">
+            <div class="message-box__right__top">
+                <div class="messenger-time">{{message.createdAt | date:'medium'}}</div>
+            </div>
+            <div class="message-box__right__middle">
+                <div class="text" [innerHTML]="message.textContent">
+                </div>
+            </div>
+            <div *ngIf="message.assetContentUrl" class="message-box__right__asset">
+    
+            </div>
+        </div>
+    </div>
+</div>

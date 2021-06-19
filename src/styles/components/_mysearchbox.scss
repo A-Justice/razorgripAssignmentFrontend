@@ -1,0 +1,65 @@
+.mysearchbox {
+  // <div class="mysearchbox">
+  //     <div class="searchicon"></div>
+  //     <input class="searchinput" type="text">
+  //     <button class="searchbutton">search</button>
+  // </div>
+  position: relative;
+  border-radius: 0.4rem;
+  border: 1px solid var(--grey-border-color);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: white;
+  margin-right: 5rem;
+  .searchicon {
+    height: 2.5rem;
+    margin: 0.5rem;
+    border-radius: var(--big-radius);
+    overflow: hidden;
+    img,
+    svg {
+      width: auto !important;
+    }
+  }
+  .searchinput {
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem 1rem 1rem 1.5rem;
+    flex-grow: 1;
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      border: none;
+      background-color: transparent;
+      //-webkit-text-fill-color: white;
+      //-webkit-box-shadow: 0 0 0px 1000px #000 inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .cleartexticon {
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+  .searchbutton {
+    position: absolute;
+    left: 102%;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+  svg,
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+.itembox{
+    // <div class="itembox">
+    //     <div class="icon">
+    //         <svg>
+    //             <use href="assets/icons/svgs.svg#icon-search" />
+    //         </svg>
+    //     </div>
+    //     <div class="text">Account</div>
+    // </div>
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+    overflow: hidden;
+    border: var(--border);
+    margin: 0.3rem .5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition:.3s all;
+    background-color: var(--white);
+    .icon{
+        height:3rem;
+        width:3rem;
+        flex:0 0 3rem;
+        display: inline-block;
+        border-radius: var(--round-radius);
+        overflow: hidden;
+        svg,img{
+            height:100%;
+            width:100%;
+            border-radius: var(--round-radius);
+        }
+    }
+    .text{
+        margin:0rem 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+    &:hover{
+        background-color: var(--hover-background);
+        box-shadow: 0px 0px 0px 2px white;
+        .text{}
+        .icon{}
+    }
+}

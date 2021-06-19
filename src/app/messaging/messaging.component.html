@@ -1,0 +1,59 @@
+<div class="chat-body">
+    <div class="chat-body--left">
+      <div class="detail-box">
+        <div class="name">{{userDetails.unique_name}}</div>
+      </div>
+      <!-- <div class="search-box bd-bottom">
+        <input type="text" placeholder="Search" class="tb-styless">
+      </div> -->
+      <div  class="chats-pane bd-bottom">
+        <div (click)="chatItemClicked(user)" *ngFor="let user of messagingService.usersList" class="chat-item bd-bottom">
+          <div class="chat-item__image">
+            <img [src]="" alt="">
+          </div>
+          <div class="chat-item__text">
+            <div class="chat-item__text--username">{{user?.userName}}</div>
+            <div class="chat-item__text--userstatus">online</div>
+          </div>
+          <div class="chat-item__alerts">
+            <span class="badge badge-primary"></span>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="chat-body--mid">
+      <div class="chat-body--mid__header bd-bottom">
+        <div class="chat-body--mid__header--image">
+          <!-- <img *ngIf="activeChatItem"  [lazyLoad]="activeChatHeaderImageUrl" alt=""> -->
+        </div>
+        <div class="chat-body--mid__header--info">
+          <div class="chat-body--mid__header--info__username">{{activeChatItem?.userName}}</div>
+          <!-- <div class="chat-body--mid__header--info__userstatus">Typing...</div> -->
+        </div>
+        <div class="chat-body--mid__header--actions"> <button (click)="logout()" class="btn btn-c btn--b-c">Logout</button></div>
+      </div>
+
+      <div (click)="UnblockUser(activeChatItem.id)"  *ngIf="activeChatItem?.userName && (activeChatItem|isblocked) && !doingBlockWork" class="block-pane">
+        <div>UnBlock</div>
+      </div>
+      <div (click)="blockUser(activeChatItem.id)" *ngIf="activeChatItem?.userName && !(activeChatItem|isblocked) && !doingBlockWork" class="block-pane">
+        <div>Block</div>
+      </div>
+      <div *ngIf="activeChatItem?.userName && doingBlockWork" class="block-pane">
+        <div>Loading ...</div>
+      </div>
+      <div #activeChatsPane (scroll)="chatPageScrolled($event)" class="chat-body--mid__activechatpane">
+          <ng-container *ngIf="activeChatItem?.userName">
+            <app-message-item  *ngFor="let _message of messages" [message]="_message"></app-message-item>
+          </ng-container>
+          <div *ngIf="!activeChatItem?.userName" class="noactivechat">
+              Select a chat item on the left to start chatting
+          </div>
+      </div>
+      <div *ngIf="activeChatItem?.userName" class="chat-body--mid__footer">
+        <app-chat-text-box  (submit)="sendMessage($event)"></app-chat-text-box>
+      </div>
+    </div>
+     
+  </div>

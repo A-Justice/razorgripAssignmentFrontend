@@ -1,0 +1,44 @@
+.modern_msgbox {
+    background-color: var(--dark-white);
+    position: relative;
+    margin: 2rem 4rem;
+    display: inline-grid;
+    padding: 2rem;
+    grid-template-columns: 3rem 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "image name date"
+        "image text text"
+        "image reactions reactions";
+    color:var(--light-black-text);
+    border:var(--border);
+    border-radius: var(--big-radius);
+    .image {
+        height: 7rem;
+        border-radius: var(--bigger-radius);
+        //overflow: hidden;
+        width: 7rem;
+        position: absolute;
+        left: - 3.5rem;
+        top: calc(50% - 3.5rem);
+        //transform: translate(-50%, -50%);
+    }
+    .name {
+        grid-area: name;
+        color: var(--primary-color);
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+    .date {
+        grid-area: date;
+        justify-self: end;
+        color: var(--primary-color);
+    }
+    .comment-text {
+        grid-area: text;
+        text-align: justify;
+    }
+    .comment-reactions {
+        grid-area: reactions;
+    }
+}

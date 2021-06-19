@@ -1,0 +1,103 @@
+$shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+$royalBlue: #002366;
+
+@import "../../styles/abstract/variables";
+
+.lgmain {
+  height: calc(100vh);
+  display: grid;
+  grid-template-columns: minmax(30rem, 50rem) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header header" "left rigt";
+  &__header {
+    height: 6rem;
+    border-bottom: var(--border);
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .actions {
+      & > * {
+        margin: 1rem;
+      }
+    }
+  }
+  &__left {
+    grid-area: left;
+    align-self: center;
+  }
+  &__right {
+    grid-area: right;
+  }
+}
+
+.lgblock {
+  padding: 0 5rem;
+  margin-bottom: 15rem;
+
+  .lgheader {
+    text-align: center;
+    & > img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 100px;
+    }
+  }
+
+  .lgform {
+    & > section {
+      & > div {
+        margin: 2.5rem 0rem;
+      }
+    }
+    & > * {
+      margin: 1rem 0px;
+    }
+  }
+
+  .lgfooter__header {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .error-msg {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--error-color);
+    padding: 0.1rem;
+  }
+
+  .lgfooter__first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin:1rem 2rem 0rem 2rem;
+  }
+
+  .lgfooter__third {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+
+    .slink {
+      width: 40px;
+      height: 40px;
+      box-shadow: $shadow;
+      border-radius: 100px;
+
+      // background-color: $royalBlue;
+
+      img {
+        width: 36px;
+        height: 36px;
+        margin: 2px;
+        border-radius: 200px;
+        vertical-align: bottom;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

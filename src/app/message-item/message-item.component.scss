@@ -1,0 +1,68 @@
+.message-container{
+    margin:2rem;
+    display: flex;
+    &.sent{
+        justify-content: flex-end;
+        text-align: right;
+        .message-box{
+            justify-content: flex-end;
+            .message-box__right{
+                align-items: flex-end;
+            }
+        }
+    }
+    &.recieved{
+        justify-content: flex-start;
+    }
+
+    .message-box {
+        position: relative;
+        display: flex;
+        //margin:1rem;
+        // max-width: 40%;
+        // min-width: 30rem;
+        background-color: var(--white);
+        padding: 1rem 1.5rem;
+        border: var(--border);
+        &__right {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex:1 1 30rem;
+            max-width: 30rem;
+            color:black;
+            border-radius: var(--small-radius);
+            &__top {
+                .messenger-name {
+                    margin-right: 1rem;
+                    font-weight: bold;
+                }
+    
+                .messenger-time {
+                }
+            }
+    
+            &__asset{
+                background-color: black;
+                height: 15rem;
+            }
+    
+            &__middle {
+                .text{
+                    margin: .5rem;
+                    text-align: justify;
+                }
+            }
+    
+            
+    
+            & > * {
+                margin: .25rem;
+            }
+        }
+    
+        &:hover{
+            background-color: var(--hover-color);
+        }
+    }
+}
