@@ -37,12 +37,13 @@ export class MessagingService {
       tokenValue = '?token=' + token;
     }
     this.messagingHubConnection = new SignalR.HubConnectionBuilder()
-      .withUrl(this.messagingHubUrl + tokenValue, {
-        skipNegotiation: true,
-        transport: signalR.HttpTransportType.WebSockets,
-      })
+      .withUrl(this.messagingHubUrl + tokenValue)
       .configureLogging(SignalR.LogLevel.Debug)
       .build();
+      // , {
+      //   skipNegotiation: true,
+      //   transport: signalR.HttpTransportType.WebSockets,
+      // }
 
     this.start(this.messagingHubConnection, this.wireMessagingHubHandlers);
   }
