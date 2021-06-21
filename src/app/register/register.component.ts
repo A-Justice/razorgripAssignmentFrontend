@@ -37,12 +37,14 @@ export class RegisterComponent implements OnInit {
         this.login({usernameOrEmail:registerObject.userName,password:registerObject.password,rememberMe:false});
       }, error => {
         this.loaderService.setHttpProgressStatus(false);
-        console.log(Error,error);
+        console.log("Error",error);
         if(error.error){
-          if(error.error[0]){
+          if(typeof error.error[0] != "string"){
             this.error = error.error[0]?.description;
+            return;
           }
-          return
+          this.error = error.error;
+          return;
         }
         this.error = error;
       })
