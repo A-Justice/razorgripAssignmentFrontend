@@ -5,7 +5,7 @@ import { JwtHelperService } from "@auth0/angular-jwt";
 import { DecodedToken } from 'src/data/dtos/decodedtoken';
 import { settings } from 'src/data/helpers/settings';
 import { NotificationService } from './notification.service';
-import { UserForReturn } from 'src/data/DTOs/user';
+import { UserForReturn } from 'src/data/dtos/user';
 
 @Injectable()
 export class AuthService {

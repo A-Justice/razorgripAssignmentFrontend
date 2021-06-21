@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@aspnet/signalr';
 import * as SignalR from '@aspnet/signalr';
 import { BehaviorSubject } from 'rxjs';
-import { Message } from 'src/data/DTOs/message';
-import { UserForReturn } from 'src/data/DTOs/user';
+import { Message } from 'src/data/dtos/message';
+import { UserForReturn } from 'src/data/dtos/user';
 import { settings } from 'src/data/helpers/settings';
 import { AuthService } from './auth.service';
 

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { UserForReturn } from 'src/data/DTOs/user';
+import { UserForReturn } from 'src/data/dtos/user';
 import { AuthService } from 'src/services/auth.service';
 
 @Pipe({

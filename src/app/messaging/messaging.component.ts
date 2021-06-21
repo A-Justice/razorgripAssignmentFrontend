@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { DecodedToken } from 'src/data/dtos/decodedtoken';
-import { Message } from 'src/data/DTOs/message';
-import { UserForReturn } from 'src/data/DTOs/user';
+import { Message } from 'src/data/dtos/message';
+import { UserForReturn } from 'src/data/dtos/user';
 import { AuthService } from 'src/services/auth.service';
 import { MessagingService } from 'src/services/messaging.service';
 

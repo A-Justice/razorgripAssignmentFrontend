@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Message } from 'src/data/DTOs/message';
+import { Message } from 'src/data/dtos/message';
 import { settings } from 'src/data/helpers/settings';
 import { AuthService } from 'src/services/auth.service';
 
