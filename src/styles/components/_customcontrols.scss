@@ -83,14 +83,6 @@ input {
 }
 
 .c-input .c-addon {
-  // color: var(--input-text-inactive);
-  // font-size: 1.5rem;
-  // vertical-align: middle;
-  // transition: color 0.25s;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  //margin: 0 0 0 1rem;
   width: 2rem;
   height: 2rem;
   &:hover {
@@ -121,47 +113,6 @@ input {
 
 //****BUTTONS****///
 
-.morescrollbtn a span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 46px;
-  height: 46px;
-  margin-left: -23px;
-  border: 1px solid rgb(71, 71, 71);
-  box-shadow: var(--primary-color);
-  border-radius: 100%;
-  box-sizing: border-box;
-  background-color: rgb(71, 71, 71);
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: "";
-    width: 16px;
-    height: 16px;
-    margin: -12px 0 0 -8px;
-    border-left: 1px solid rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(255, 255, 255);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-  }
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    content: "";
-    width: 44px;
-    height: 44px;
-    box-shadow: 0 0 0 0 rgb(71, 71, 71); // rgba(255, 255, 255, 0.1);
-    border-radius: 100%;
-    opacity: 0;
-    animation: glow 3s infinite;
-    box-sizing: border-box;
-  }
-}
 
 .mytransparent-btn {
   padding: 1rem;

@@ -1,19 +1,4 @@
-.rotatedUp {
-    transform: rotate(-180deg);
-}
-.rotatedDown {
-    transform: rotate(0deg);
-}
-.rotatedLeft {
-    transform: rotate(-270deg);
-}
-.rotatedRight {
-    transform: rotate(-90deg);
-}
 
-.growFromLeft {
-    animation: growFromLeft 0.3s ease-in-out;
-}
 
 .faded {
     color: rgba(white, 0.5) !important;
@@ -28,17 +13,7 @@
     display: none;
 }
 
-.squeezeToLeft {
-    //animation: squeezeToLeft .3s ease-in-out;
-    border: none !important;
-    padding: 0rem !important;
-    width: 0rem;
-    transition: all 0.3s;
-    &:before,
-    &:after {
-        display: none;
-    }
-}
+
 
 .hidden {
     visibility: hidden;
