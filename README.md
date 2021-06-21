@@ -1,5 +1,9 @@
 # Razorgripassignment
 
+# Deployed to heroku on https://razorgripinterviewfrontend.herokuapp.com
+
+# Uses aspnet/signalr for realtime chat
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
